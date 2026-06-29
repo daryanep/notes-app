@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App | daryan.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body id="body-el">
+    <header>
+      <div class="save-alert-container">
+        <div id="save-alert">
+          <p>Note Saved!</p> <i class="fa-solid fa-check"></i>
+        </div>
+        <div id="delete-alert">
+          <p>Note Deleted!</p> <i class="fa-solid fa-trash"></i>
+        </div>
+        <div id="added-alert">
+          <p>Added New Note!</p> <i class="fa-solid fa-plus"></i>
+        </div>
+      </div>
+      <nav class="navbar">
+        <div>
+          <button id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+          <h1>daryan notes.</h1>
+        </div>
+        <div id="hamburger-menu">
+          <ul class="nav-menu">
+            <li><button id="add-new-btn">Add New Notes +</button></li>
+            <li><button>About</button></li>
+          </ul>
+        </div>
+        <div>
+          <button id="dark-toggle"><i class="fa-solid fa-moon"></i></button>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      
+
+      <div class="" id="notes-container">
+        <div id="notes"></div>
+      </div>
+
+      <div id="popup-container">
+        <div id="new-notes-popup">
+          <div class="popup-header-container">
+            <p>New Notes</p>
+            <button id="popup-cancel-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="popup-main-container">
+            <input id="popup-title-el" type="text" placeholder="Title" />
+            <button id="add-new-notes"><i class="fa-solid fa-add"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="notes-container">
+        <ul id="notes-list"></ul>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
