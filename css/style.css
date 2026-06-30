@@ -67,8 +67,6 @@ body {
     background-color: var(--background);
     font-family: "Montserrat", sans-serif;
     color: var(--primary);
-
-    overflow-x: hidden;
 }
 
 body.dark {
@@ -436,7 +434,7 @@ NOTES
 */
 
 #notes {
-    position: absolute;
+    position: fixed;
 
     background-color: var(--background);
     width: 100%;
@@ -532,9 +530,9 @@ NOTES
     overflow-x: none;
     overflow-y: scroll;
     scrollbar-width: thin;
-    
+
     outline: none;
-    
+
     resize: none;
 
     margin-bottom: 1rem;
@@ -582,7 +580,7 @@ NOTES
 #delete-alert {
     display: flex;
     align-items: center;
-    
+
     position: absolute;
 
     gap: 10px;
@@ -635,4 +633,71 @@ NOTES
 #added-alert.active {
     transition: var(--transition);
     transform: translateY(30px);
+}
+
+/* 
+ABOUT
+*/
+
+#about {
+    position: fixed;
+
+    background-color: var(--background);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem 2rem 0.5rem 2rem;
+
+    transition: var(--transition);
+    transform: translateX(100%);
+
+    color: var(--primary);
+}
+
+
+#about.active {
+    transition: var(--transition);
+    transform: translateX(0);
+
+    z-index: 4;
+}
+
+.about-card {
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-top-right-radius: var(--radius-lg);
+
+    margin: 0.5rem 0;
+}
+
+#about-back-btn {
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+
+    font-size: 1.3rem;
+
+    color: inherit;
+    background-color: var(--background);
+
+    border-radius: var(--radius-md);
+    border: 1px solid var(--background);
+
+    margin-bottom: 1rem;
+
+    transition: var(--transition);
+}
+
+#about-back-btn:hover {
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+#about-back-btn:active {
+    transition: var(--transition);
+    transform: scale(0.9);
 }

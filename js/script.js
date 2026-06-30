@@ -3,6 +3,9 @@ let myNotes = []
 
 const menuBtn = document.getElementById("menu-toggle")
 const menuEl = document.getElementById("hamburger-menu")
+const aboutBtn = document.getElementById("about-btn")
+const aboutEl = document.getElementById("about")
+const aboutBackBtn = document.getElementById("about-back-btn")
 const darkBtn = document.getElementById("dark-toggle")
 const isDarkFromLocal = JSON.parse(localStorage.getItem("isDark"))
 const addNewBtn = document.getElementById("add-new-btn")
@@ -74,13 +77,22 @@ addNewNotesBtn.addEventListener("click", () => {
     menuClose()
 })
 
+aboutBtn.addEventListener("click", ()=>{
+    aboutEl.classList.toggle("active")
+    menuClose()
+})
 
+aboutBackBtn.addEventListener("click", () => {
+    aboutEl.classList.remove("active")
+})
 
 notesSaveBtn.addEventListener("click", () => {
     saveNotes()
     render(myNotes)
     menuClose()
 })
+
+
 
 // FUNCTION
 function renderDark() {
